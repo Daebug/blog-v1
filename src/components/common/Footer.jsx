@@ -1,0 +1,73 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
+  return (
+    <footer className="bg-primary-light py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Section */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-gradient">Your Blog</h3>
+            <p className="text-gray-600 mb-4">
+              Sharing insights and experiences about technology, professional development, and industry knowledge to inspire and educate.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-gray-700">Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-600 hover:text-secondary transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-600 hover:text-secondary transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-gray-700">Connect</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-600 hover:text-secondary transition-colors">
+                <FaFacebookF className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-secondary transition-colors">
+                <FaTwitter className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-secondary transition-colors">
+                <FaInstagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-secondary transition-colors">
+                <FaLinkedinIn className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
